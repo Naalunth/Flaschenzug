@@ -24,12 +24,6 @@
     <ClInclude Include="Application.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="util.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="vectors.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Flaschenzug.cpp">
@@ -56,10 +50,5 @@
     <ClCompile Include="bigint\BigUnsignedInABase.cc">
       <Filter>Source Files\BigInt</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="util.inl">
-      <Filter>Source Files</Filter>
-    </None>
   </ItemGroup>
 </Project>

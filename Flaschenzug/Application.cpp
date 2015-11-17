@@ -35,6 +35,7 @@ void Application::run()
 	{
 		cout << "\n"
 			<< "1: Load file\n"
+			<< "2: All given demos\n"
 			<< "0: Exit\n"
 			<< "> ";
 		int input;
@@ -55,6 +56,23 @@ void Application::run()
 
 			Flaschenzug::Flaschenzug f{ containers };
 			cout << "There are " << f.GetNumberOfPermutations(items) << " ways to arrange the bottles." << std::endl;
+		}
+		break;
+		case 2:
+		{
+			for (int fileid = 0; fileid <= 5; fileid++)
+			{
+				std::string filename = std::string("flaschenzug").append(std::to_string(fileid)).append(".txt");
+				std::ifstream file{ filename };
+				int items, numContainers;
+				file >> items >> numContainers;
+				std::vector<uint32_t> containers(numContainers);
+				for (int i = 0; i < numContainers; i++)
+					file >> containers[i];
+
+				Flaschenzug::Flaschenzug f{ containers };
+				cout << filename << ": " << f.GetNumberOfPermutations(items) << " permutations" << std::endl;
+			}
 		}
 		break;
 		case 0:
