@@ -27,7 +27,7 @@ void Application::run()
 
 	std::string inputString;
 
-	cout << "Flaschenzug 1.0\n"
+	cout << "Flaschenzug 1.3\n"
 		<< "Author: Kevin Schier\n"
 		<< "Licensed under WTFPL\n\n";
 
