@@ -172,7 +172,7 @@ BigUnsigned Flaschenzug::Flaschenzug::GetNumberOfPermutationsInternalIterative(u
 
 	for (int numContainersLeft = 2; numContainersLeft <= numContainers; ++numContainersLeft)
 	{
-		//for (auto& i : *lastColumn) std::cout << std::setw(2) << i << " ";
+		//for (auto& i : *lastColumn) std::cout << i << " ";
 		//this is the index of the container currently examined
 		uint_fast32_t containerIndex = numContainers - numContainersLeft;
 		//this stores the capacity of all containers after the current one
@@ -193,7 +193,7 @@ BigUnsigned Flaschenzug::Flaschenzug::GetNumberOfPermutationsInternalIterative(u
 		//the newly calculated row is then used as the source for the next one
 		std::swap(currentColumn, lastColumn);
 	}
-	//for (auto& i : *lastColumn) std::cout << std::setw(2) << i << " ";
+	//for (auto& i : *lastColumn) std::cout << i << " ";
 	//the last value in the row that just got calculated is the desired result
 	return (*lastColumn)[items];
 }
